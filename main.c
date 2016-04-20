@@ -26,9 +26,9 @@
 #include "Menu.h"
 #include "Timer.h"
 
-int main( void ) {
+int main(void) {
     SysInit();
-    //EepromInit();
+    EepromInit();
     ButtonInit();
     MusicInit();
     MotoInit();
@@ -41,8 +41,8 @@ int main( void ) {
         MenuSet(ButtonRead());
         if(TimerGetTimeFlag() > 1) {
             TimerClearTimeFlag();
-
         }
-        MenuFlash();
+        MenuFlash();//菜单动画服务
+        MusicServerTime();//蜂鸣器时间服务
     }
 }

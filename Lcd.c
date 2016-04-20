@@ -178,6 +178,8 @@ void LcdInit(void) {
     HtlcdDisAll();
     //LcdSetNum(1,2,3,4);
     //LcdSetPoint(0);
+//    LcdSetNum(8,8,8,8);
+//    while(1);
 }
 /**********************************************函数定义***************************************************** 
 * 函数名称: void LcdBcakLedSet(u8 cmd) 

@@ -62,16 +62,16 @@ u8 ButtonRead(void) {
             count1_small++;
         } else {
             count1_small = 0;
-            if(count1 < 1000) {
+            if(count1 < 2000) {
                 count1++;
-            } else {
-                if(count1 == 999) {//这边还需要长按进入
+                 if(count1 == 1999) {//这边还需要长按进入
                     return 0x01;
                 }
+            } else {
             }
         }
     } else {
-        if( (count1 > 100) && (count1 < 900) ) {//短按进入
+        if( (count1 > 100) && (count1 < 1900) ) {//短按进入
             count1 = 0;
             return 0x10;
         }
